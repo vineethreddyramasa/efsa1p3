@@ -1,0 +1,13 @@
+{% extends "portfolio/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <br>
+    <h1>User Registration</h1>
+    <br>
+    <form method="post" action=".">{% csrf_token %}
+        <table border="0">
+            {{ form|crispy }}
+        </table>
+        <input type="submit" value="Register" />
+    </form>
+{% endblock %}
